@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+    <html lang="ko">
+    <head>
+        <link href="https://media.discordapp.net/attachments/955121775426039818/956943912956747927/logo_main.png" rel="shortcut icon" type="image/x-icon">
+        <title>WAPING ALL BACKUP</title>
+        <meta property="og:title" content="WAPING ALL BACKUP">
+        <meta property="og:description" content="Support Server : https://discord.gg/sexking">
+        <meta property="og:image" content="https://media.discordapp.net/attachments/955121775426039818/956943912956747927/logo_main.png">
+        <meta content="#DBE6F6" data-react-helmet="true" name="theme-color">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+        <script src="https://cdn.discordapp.com/attachments/955121733805957131/955372924297183302/sweetalert29.js"></script>
+    </head>
+    <body style="background-color:#2c2a2ac0"></body>
+<body>
+<script>
+        let timerInterval
+        Swal.fire({
+            color: "#000000",
+            title: "인증 완료",
+            html: "이제 이 창을 닫아도 됩니다.",
+            timer: 5000,
+            timerProgressBar: true,
+            showConfirmButton: false,
+            footer: '이 창은 5초뒤에 자동으로 닫힙니다',
+            icon: "success",
+            didOpen: () => {
+                Swal.showLoading()
+                const b = Swal.getHtmlContainer().querySelector('b')
+                timerInterval = setInterval(() => {
+                    b.textContent = Swal.getTimerLeft()
+                }, 100)
+            },
+            willClose: () => {
+                clearInterval(timerInterval)
+            }
+        }).then((result) => {
+            if (result.dismiss === Swal.DismissReason.timer) {
+                window.close();
+            }
+        })
+    </script>
+            <script>
+                var keydownCtrl = 0;
+                var keydownShift = 0;
+                document.onkeydown=keycheck;
+                document.onkeyup=uncheckCtrlShift;
+                function keycheck()
+                {
+                switch(event.keyCode){ 
+                case 123:event.keyCode='';return false; break;
+                case 17:event.keyCode='';keydownCtrl=1;return false; break;
+                }
+                if(keydownCtrl) return false;
+                }
+                function uncheckCtrlShift()
+                {
+                if(event.keyCode==17)      keydownCtrl=0;
+                if(event.keyCode==16)      keydownShift=0;
+                }
+                function click()
+                {
+                if ((event.button==2) || (event.button==2)) 
+                {alert('WAPING ALL BACKUP\n지원 서버 : https://discord.gg/sexking');}
+            }
+            document.onmousedown=click;
+            </script>
+    </body>
+</html>
